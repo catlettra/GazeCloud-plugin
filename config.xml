@@ -21,7 +21,7 @@
         <version>3.0.1</version>
         <apiVersion>3</apiVersion>
         <description twig="on"><![CDATA[<strong>{{gT("LimeSurvey Fruity Theme")}}</strong><br>{{gT("A fruity theme for a flexible use. This theme offers monochromes variations and many options for easy customizations.")}}]]></description>
-        <last_update>2021-09-06 16:54:33</last_update>
+        <last_update>2021-09-11 22:31:17</last_update>
         <extends>fruity</extends>
     </metadata>
 

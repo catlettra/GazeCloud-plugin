@@ -1,0 +1,44 @@
+{#
+    LimeSurvey
+    Copyright (C) 2007-2017 The LimeSurvey Project Team / Louis Gac
+    All rights reserved.
+    License: GNU/GPL License v2 or later, see LICENSE.php
+    LimeSurvey is free software. This version may have been modified pursuant
+    to the GNU General Public License, and as distributed it includes or
+    is derivative of works licensed under the GNU General Public License or
+    other free or open source software licenses.
+    See COPYRIGHT.php for copyright notices and details.
+
+    (¯`·._.·(¯`·._.· Group  ·._.·´¯)·._.·´¯)
+
+    This file is one of the most important of the rendering progress.
+    It will display the group and the questions inside the group via the for statement that includes question.twig
+
+    Here, you have access to the array aGroup that contains the data of the current group and the array of questions of this group: aQuestions
+    To see what's inside aGroup, turn debug mode on and copy the following line to the end of this file:
+    {{ dump(aGroup) }}
+
+#}
+    <!-- Creating some buttons to start/stop the eye tracking, may put them in separate places later --> 
+    <p> <strong>Temp control buttons</strong></p>
+    <button  type="button" onclick="GazeCloudAPI.StartEyeTracking();">Start</button>
+      <button  type="button" onclick="GazeCloudAPI.StopEyeTracking();">Stop</button>
+      <div>
+         <p>  
+            Real-Time Result:
+         <p id = "GazeData" > </p>
+         <p id = "HeadPhoseData" > </p>
+         <p id = "HeadRotData" > </p>
+         </p>
+      </div>
+      <div id ="gaze" style ='position: absolute;display:none;width: 100px;height: 100px;border-radius: 50%;border: solid 2px  rgba(255, 255,255, .2);	box-shadow: 0 0 100px 3px rgba(125, 125,125, .5);	pointer-events: none;	z-index: 999999'></div>
+
+
+<!-- START OF GROUP: {{ aGroup.name }} {{ aGroup.gid }}  -->
+<div id='group-{{ aGroup.gseq }}' class="{{ aSurveyInfo.class.groupoutercontainer }}{{ aGroup.class }} space-col" {{ aSurveyInfo.attr.questiongroup }}>
+
+    {# The container div itself could often change from a template to another, so we clearly separate it. #}
+    {{ include('./subviews/survey/group_subviews/group_container.twig') }}
+
+</div>
+<!-- END OF GROUP: {{ aGroup.name }} {{ aGroup.gid }}  -->
