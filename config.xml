@@ -10,18 +10,18 @@
 <config>
     <!-- Those metadata are displayed in the theme configuration page.  -->
     <metadata>
-        <name>gazegloud-plugin</name>
+        <name>fruity_gazecloud</name>
         <title>Fruity Theme</title>
-        <creationDate>2021-08-09 19:23</creationDate>
-        <author>killmeplease</author>
-        <authorEmail>zvdbsfkqkjiugmgqdu@tbbyt.net</authorEmail>
+        <creationDate>2021-07-02 05:21</creationDate>
+        <author>elettramessuri</author>
+        <authorEmail>e.messuri@campus.unimib.it</authorEmail>
         <authorUrl>http://www.limesurvey.org</authorUrl>
         <copyright>Copyright (C) 2005 - 2016 LimeSurvey Gmbh, Inc. All rights reserved.</copyright>
         <license>GNU General Public License version 2 or later</license>
         <version>3.0.1</version>
         <apiVersion>3</apiVersion>
         <description twig="on"><![CDATA[<strong>{{gT("LimeSurvey Fruity Theme")}}</strong><br>{{gT("A fruity theme for a flexible use. This theme offers monochromes variations and many options for easy customizations.")}}]]></description>
-        <last_update>2021-09-11 22:31:17</last_update>
+        <last_update>2021-09-14 19:21:33</last_update>
         <extends>fruity</extends>
     </metadata>
 
